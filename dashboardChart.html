@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for All files</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="chart/prettify.css" />
+    <link rel="stylesheet" href="chart/base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(sort-arrow-sprite.png);
+        }
+    </style>
+	<script src="temp/angular.js"></script>
+	<script src="temp/angular-ui-router.js"></script>
+	<script src="dashboardCtrl.js"></script>
+	<script src="temp/aacoc_charts/chartsModule.js"></script>
+	<script src="temp/lineChart.js"></script>
+	<script src="temp/chartsModule.js"></script>
+	<script src="customCallRest.js"></script>
+</head>
+<body>
+
+
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      All results
+    </h1>   
+  </div>
+  <div class='status-line medium'></div>
+<div class="pad1">
+<div ng-app="restCall">
+<div ng-controller="CallController">
+		
+	<table class="coverage-summary">
+	<thead>
+	<tr>
+
+		
+	   <th data-col="file" data-fmt="html" data-html="true" class="file">Customer</th>
+	   <th data-col="pic" data-type="number" data-fmt="html" data-html="true" class="pic"></th>
+	   <th data-col="result1" data-type="number" data-fmt="pct" class="pct">Total daily pudding items sold </th>   
+	   <th data-col="result1" data-type="number" data-fmt="pct" class="pct">Average daily pudding</th>
+	   <th data-col="result1" data-type="number" data-fmt="pct" class="pct">Total daily item sales</th>   
+	   
+	</tr>
+	</thead>
+	<tbody><tr>
+		<td class="file high" data-value="coa"><a href="coa/index.html">Results Day 1</a></td>
+		<td data-value="100" class="pic high"><div class="chart"><div class="cover-fill cover-full" style="width: 100%;"></div><div class="cover-empty" style="width:0%;"></div></div></td>
+		<td data-value="100" class="pct high">				
+				<p>{{summ}}</p>			
+		</td>
+		<td data-value="100" class="pct high"><p>{{summ/2}}</p></td>
+		<td data-value="100" class="pct high">{{((summ-2)/2)/2}}</td>
+		</tr>
+
+	<tr>
+		<td class="file medium" data-value="coa/lib"><a href="coa/lib/index.html">Results Day 2</a></td>
+		<td data-value="68.17" class="pic medium"><div class="chart"><div class="cover-fill" style="width: 68%;"></div>
+		<div class="cover-empty" style="width:32%;"></div></div></td>
+		<td data-value="68.17" class="pct medium">
+			<p>{{summ-2}}</p>
+		</td>
+		<td data-value="59.05" class="pct medium"><p>{{(summ-2)/2}}</p></td>
+		<td data-value="351" class="abs medium">{{((summ-2)/2)/2}}</td>
+		</tr>
+
+	</tbody>
+	</table>
+</div>
+</div>
+</div><div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+</div>
+<script src="chart/prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="chart/sorter.js"></script>
+
+
+
+</body>
+</html>
